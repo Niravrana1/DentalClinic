@@ -1,0 +1,32 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.DoctorScheduleview
+@{
+    ViewBag.Title = "AddSchedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddSchedule</h2>
+
+@using (Html.BeginForm("AddSchedule", "Doctor", FormMethod.Post))
+{
+
+    @Html.AntiForgeryToken()
+    <div class="modal-body">
+        <div class="col-md-8">
+            <div class="col-md-9">
+                @Html.LabelFor(m => m.AvailableDate)
+                @Html.TextBoxFor(m => m.AvailableDate, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+                @*@Html.TextBoxFor(m => m.AvailableDate, htmlAttributes: new { @class = "form-control", PlaceHolder = "MM/DD/YYYY" })*@
+                @Html.ValidationMessageFor(m => m.AvailableDate)
+            </div>
+            </div>
+        <div class="col-md-8">
+            <div class="col-md-9">
+                @Html.LabelFor(m => m.AvailableDate)
+                @Html.TextBoxFor(m => m.AvailableTime ,htmlAttributes: new { @class = "form-control" , placeholder="HH:MM" })
+                @Html.ValidationMessageFor(m => m.AvailableDate)
+            </div>
+
+        </div>
+        </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            }

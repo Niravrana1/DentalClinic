@@ -1,0 +1,16 @@
+﻿@model DentalPatientClinicApplication.Models.AspNetRole
+@{
+    ViewBag.Title = "addrole";
+}
+
+<h2>addrole</h2>
+
+@using (Html.BeginForm("addrole", "Admin"))
+{
+    <div>
+        @Html.Label("User Role")
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <button type="submit" value="addrole">Add</button>
+}
+

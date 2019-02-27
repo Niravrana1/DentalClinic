@@ -1,0 +1,352 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.Appointmentview
+@{
+    ViewBag.Title = "Schedule";
+}
+
+<h2>Schedule</h2>
+
+
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal col-md-5">
+    <h4>Doctor</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PatientName)
+
+        @Html.TextBox("Patientname", (string)ViewBag.Firstname + " " + (string)ViewBag.Lastname, new { @class = "form-control", placeholder = "Name", id = "pname" })
+        @Html.ValidationMessageFor(m => m.PatientName)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Did)
+        @Html.DropDownList("doctorlist", null, "--Select Doctor--", htmlAttributes: new { @class = "form-control", Id = "SelectDoctor" })
+        @Html.ValidationMessageFor(m => m.Did)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.AppointmentDate)
+
+        @Html.TextBoxFor(m => m.AppointmentDate, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+        @Html.ValidationMessageFor(m => m.AppointmentDate)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.AppointmentTime)
+        <div>
+            @Html.DropDownList("txtTime", null, "Select Time", new { @class = "form-control" })
+
+        </div>
+
+        @Html.ValidationMessageFor(m => m.AppointmentTime)
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Reason)
+
+        @Html.TextAreaFor(m => m.Reason, new { @class = "form-control", placeholder = "Reason..", Id = "reason" })
+        @Html.ValidationMessageFor(m => m.Reason)
+
+    </div>
+    <button type="submit" value="Makeappointment" class="btn btn-primary" id="btn">Schedule</button>
+</div>
+
+@section scripts{
+
+    <script>
+
+          $("#txtDate").change( function (event) {
+            var availabledate = $(this).val();
+              var drid = document.getElementById('SelectDoctor').value;
+            if (availabledate != null && availabledate != '' && drid != null && drid != '') {
+                 $.ajax({
+            url: "@Url.Action("GetSchedule", "patient")",
+            data: JSON.stringify({
+                DrID:drid, availableDate:availabledate.toString("yyyy-MM-dd")
+            }),
+            //data: { id: patientId },
+            type: "POST",
+            datatype: 'application/json',
+            contentType: 'application/json',
+                     success: function (data) {
+                         console.log(data);
+                         var htmldata = '<option value="">Select Time</option>';
+
+                             for (var i = 0; i < data.length; i++) {
+                                 var timedisp = formatAMPM(data[i].AvailableTime.Hours, data[i].AvailableTime.Minutes);
+                                 htmldata += '<option value="' + timedisp + '">' + timedisp + '</option>'
+
+                             }
+                             $("#txtTime").html(htmldata)
+
+                     }
+        });
+            }
+
+        });
+
+
+        $("#ddDoctorsList").change(function (event) {
+            var availabledate = $(this).val();
+            var drid = document.getElementById('SelectDoctor').value;
+            if (availabledate != null && availabledate != '' && drid != null && drid != '') {
+                 $.ajax({
+            url: "@Url.Action("GetSchedule", "Appointment")",
+            data: JSON.stringify({
+                DrID:drid, availableDate:availabledate.toString("yyyy-MM-dd")
+            }),
+            //data: { id: patientId },
+            type: "POST",
+            datatype: 'application/json',
+            contentType: 'application/json',
+                     success: function (data) {
+                         console.log(data);
+                         var htmldata = '<option value="">Select Time</option>';
+
+                             for (var i = 0; i < data.length; i++) {
+                                 var timedisp = formatAMPM(data[i].AvailableTime.Hours, data[i].AvailableTime.Minutes);
+                                 htmldata += '<option value="' + timedisp + '">' + timedisp + '</option>'
+
+                             }
+                             $("#txtTime").html(htmldata)
+
+                     }
+        });
+            }
+
+        });
+
+
+
+
+       
+
+
+        function formatAMPM(hrs, mins) {
+            var hours = hrs;
+            var minutes = mins;
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours < 10 ? '0' + hours : hours; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var strTime = hours + ':' + minutes + ' ' + ampm;
+            return strTime;
+        }
+
+        function timeConvertto24Format(time) {
+            var PM = time.match('PM') ? true : false
+
+            time = time.split(':')
+            var min = time[1]
+
+            if (PM) {
+                var hour = 12 + parseInt(time[0], 10);
+                time[1] = time[1].toString().trim().replace('PM', '');
+                var sec = time[1];
+            } else {
+                var hour = time[0];
+                time[1] = time[1].toString().trim().replace('AM', '');
+                var sec = time[1];
+            }
+            return hour + ':' + sec;
+        }
+
+
+
+
+
+        $("#btn").click(function () {
+            alert("Hello");
+             var validation;
+
+             validation = $("#txtDate").val() != null && $("#txtDate").val()!=""  && $("#txtTime").val() != "" && $("#txtDate").val() != null && $("#txtTime").val() != null && $("#reason").val() != null && $("#SelectDoctor").val() != "" && $("#SelectDoctor").val() != null /*&& $("#ddServicesList").val() != "" && $("#ddServicesList").val() != null*/
+
+             if (validation) {
+
+                 var drid, pname,servicesid,appointmentdate,appointmenttime,reason;
+
+                 drid = $('#SelectDoctor').val();
+                 patientid = '0';
+                 //servicesid = $('#ddServicesList').val();
+                 appointmentdate = $('#txtDate').val();
+                 appointmenttime = $('#txtTime').val();
+                 reason = $("#reason").val();
+                 pname = $("#pname").val();
+
+
+                    $.ajax({
+                        url: '@Url.Action("ScheduleAppointment", "Patient")',
+                        data: { DrID: drid, Pname: pname ,  /*ServiceID: servicesid,*/ AppointmentDate: appointmentdate.toString("yyyy-MM-dd"), AppointmentTime: timeConvertto24Format(appointmenttime), Reason: reason },
+
+                        // dataType: 'jsonp',
+                        type: 'POST',
+                        success: function (data) {
+                            alert(data.message);
+                            if (data.message == 'Appointment Booked Successfully') {
+                                window.location.reload();
+                            }
+                        },
+                        error: function () {
+                            alert('Error Occured! Try Again');
+                        },
+
+                    });
+                }
+             else {
+                 alert("#txtDate")
+                 alert("#txtTime")
+                 alert("#selectdoctor")
+                    alert('Please Fill All Fields');
+                }
+
+
+        });
+
+    </script>
+
+
+    @*<script>
+
+        $("#txtDate").change( function (event) {
+            var availabledate = $(this).val();
+            var drid = document.getElementById('selectdoctor').value;
+            if (availabledate != null && availabledate != '' && drid != null && drid != '') {
+                 $.ajax({
+            url: "@Url.Action("GetSchedule", "Doctor")",
+            data: JSON.stringify({
+                DrID:drid, availableDate:availabledate.toString("yyyy-MM-dd")
+            }),
+            //data: { id: patientId },
+            type: "POST",
+            datatype: 'application/json',
+            contentType: 'application/json',
+                     success: function (data) {
+                         console.log(data);
+                         var htmldata = '<option value="">Select Time</option>';
+
+                             for (var i = 0; i < data.length; i++) {
+                                 var timedisp = formatAMPM(data[i].AvailableTime.Hours, data[i].AvailableTime.Minutes);
+                                 htmldata += '<option value="' + timedisp + '">' + timedisp + '</option>'
+
+                             }
+                             $("#txtTime").html(htmldata)
+
+                     }
+        });
+            }
+
+        });
+
+
+        $("#selectdoctor").change(function (event) {
+            var availabledate = $(this).val();
+            var drid = document.getElementById('selectdoctor').value;
+            if (availabledate != null && availabledate != '' && drid != null && drid != '') {
+                 $.ajax({
+            url: "@Url.Action("GetSchedule", "Doctor")",
+            data: JSON.stringify({
+                DrID:drid, availableDate:availabledate.toString("yyyy-MM-dd")
+            }),
+            //data: { id: patientId },
+            type: "POST",
+            datatype: 'application/json',
+            contentType: 'application/json',
+                     success: function (data) {
+                         console.log(data);
+                         var htmldata = '<option value="">Select Time</option>';
+
+                             for (var i = 0; i < data.length; i++) {
+                                 var timedisp = formatAMPM(data[i].AvailableTime.Hours, data[i].AvailableTime.Minutes);
+                                 htmldata += '<option value="' + timedisp + '">' + timedisp + '</option>'
+
+                             }
+                             $("#txtTime").html(htmldata)
+
+                     }
+        });
+            }
+
+        });
+
+
+        function formatAMPM(hrs, mins) {
+            var hours = hrs;
+            var minutes = mins;
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours < 10 ? '0' + hours : hours; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            var strTime = hours + ':' + minutes + ' ' + ampm;
+            return strTime;
+        }
+
+        function timeConvertto24Format(time) {
+            var PM = time.match('PM') ? true : false
+
+            time = time.split(':')
+            var min = time[1]
+
+            if (PM) {
+                var hour = 12 + parseInt(time[0], 10);
+                time[1] = time[1].toString().trim().replace('PM', '');
+                var sec = time[1];
+            } else {
+                var hour = time[0];
+                time[1] = time[1].toString().trim().replace('AM', '');
+                var sec = time[1];
+            }
+            return hour + ':' + sec;
+        }
+
+
+
+
+         $("#btnSend").click(function () {
+
+             var validation;
+
+             validation = $("#txtDate").val() != "" && $("#txtTime").val() != "" && $("#txtDate").val() != null && $("#txtTime").val() != null && $("#txtReason").val() != "" && $("#txtReason").val() != null && $("#ddDoctorsList").val() != "" && $("#ddDoctorsList").val() != null && $("#ddPatientsList").val() != "" && $("#ddPatientsList").val() != null && $("#ddServicesList").val() != "" && $("#ddServicesList").val() != null
+
+             if (validation) {
+
+                    var drid,patientid,servicesid,appointmentdate,appointmenttime,reason;
+
+                 drid = $('#ddDoctorsList').val();
+                 patientid = $('#ddPatientsList').val();
+                 servicesid = $('#ddServicesList').val();
+                 appointmentdate = $('#txtDate').val();
+                 appointmenttime = $('#txtTime').val();
+
+                 reason = $('#txtReason').val();
+
+                    $.ajax({
+                        url: '@Url.Action("saveAppointment", "Appointment")',
+                        data: { DrID: drid, PatientID: patientid, ServiceID: servicesid, AppointmentDate: appointmentdate.toString("yyyy-MM-dd"), AppointmentTime: timeConvertto24Format(appointmenttime), Reason: reason },
+                        error: function () {
+                            alert('Error Occured! Try Again');
+                        },
+                        // dataType: 'jsonp',
+                        success: function (data) {
+                            alert(data.message);
+                            if (data.message == 'Appointment Booked Successfully') {
+                                window.location.reload();
+                            }
+                        },
+                        type: 'POST'
+                    });
+                }
+                else {
+
+                    alert('Please Fill All Fields');
+                }
+
+
+        });
+    </script>*@
+}
+
+

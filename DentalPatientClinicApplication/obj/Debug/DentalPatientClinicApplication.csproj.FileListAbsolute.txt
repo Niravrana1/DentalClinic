@@ -1,0 +1,250 @@
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\ApplicationInsights.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.dll.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csc.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csc.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csc.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csi.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csi.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\csi.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.AppContext.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Console.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.IO.Compression.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.IO.Pipes.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Claims.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Threading.Thread.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.ValueTuple.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Xml.XPath.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\vbc.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\vbc.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\vbc.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Antlr3.Runtime.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\EntityFramework.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.Web.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.ApplicationInsights.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Newtonsoft.Json.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Helpers.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Mvc.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Optimization.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Razor.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\WebGrease.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Helpers.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Mvc.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Optimization.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.Razor.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Newtonsoft.Json.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Antlr3.Runtime.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\EntityFramework.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.AI.Web.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csproj.CoreCompileInputs.cache
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csproj.CopyComplete
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csprojAssemblyReference.cache
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\ApplicationInsights.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.dll.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\DentalPatientClinicApplication.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csc.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csc.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csc.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csi.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csi.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\csi.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.AppContext.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Console.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.IO.Compression.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.IO.Pipes.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Claims.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Threading.Thread.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.ValueTuple.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Xml.XPath.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\vbc.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\vbc.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\vbc.rsp
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Antlr3.Runtime.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\EntityFramework.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.Web.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.ApplicationInsights.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Newtonsoft.Json.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Owin.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Helpers.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Mvc.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Optimization.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Razor.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\WebGrease.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Helpers.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Mvc.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Optimization.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Razor.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Newtonsoft.Json.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Antlr3.Runtime.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\EntityFramework.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.AI.Web.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csprojAssemblyReference.cache
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csproj.CoreCompileInputs.cache
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.csproj.CopyComplete
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\obj\Debug\DentalPatientClinicApplication.pdb
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Net.Http.Formatting.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Http.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Http.WebHost.dll
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Net.Http.Formatting.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Http.xml
+C:\Users\TempAdmin\source\CollegeProject\DentalPatientClinicApplication - Copy\DentalPatientClinicApplication\bin\System.Web.Http.WebHost.xml

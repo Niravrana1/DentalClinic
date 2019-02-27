@@ -1,0 +1,53 @@
+﻿@model DentalPatientClinicApplication.Models.AspNetUser
+@{
+    ViewBag.Title = "Temp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Temp</h2>
+
+@Html.DropDownListFor(m => m.UserName,new SelectList(ViewBag.Roles, "UserName", "Id"),"Selet User",new {@class="form-control" , id="result" })
+<button class="btn btn-primary" id="press">Click</button>
+<p id="name"></p>
+
+@section scripts{
+    <script>
+        $("#press").click(function() {
+            $.ajax({
+                url: '@Url.Action("tempajax", "Admin")',
+                type: 'POST',
+                contentType: 'Application/Json; Charset=Utf-8',
+                data: JSON.stringify({
+                    Name: $("#result").val()
+                }),
+                datatype: 'json',
+                success: function (Nm) {
+                    $("#name").html("<i>"+Nm+"</li>")
+                },
+                error: function (request, error) {
+                    alert("error" + JSON.stringify(request));
+                }
+
+            });
+        });
+
+         @*$("#press").click(function() {
+            $.ajax({
+                url: '@Url.Action("tempajax", "Admin")',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({       
+                    Name: $("#result").val()
+                   
+                }),
+                dataType: 'json',
+                success: function (Nm) {
+                    $("#name").html("<i>" + Nm + "</li>");
+                },
+                error: function(request, error) {
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        });*@
+    </script>
+    }

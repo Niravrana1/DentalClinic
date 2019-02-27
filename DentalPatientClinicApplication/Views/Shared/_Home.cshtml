@@ -1,0 +1,72 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+<style>
+    .White {
+        color: white;
+    }
+
+    .NW {
+        width: 97%;
+    }
+   
+    /*.card-header{
+        border-bottom:2px solid orange;
+    }*/
+
+    .card {
+        border-radius: 50px;
+        
+    }
+    .card-body{
+        border-radius:50px;
+    }
+    .fa-calendar-check {
+        font-size: 35px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <img class="img-fluid" src="~/Image/background-1.png" />
+    <div class="carousel-caption row p">
+        <div class="col col-lg-3 Usercol ">
+            <h4 class="White">
+                Nirav Rana
+            </h4>
+            <p><b>Primary User</b></p>
+            <hr style="border:2px solid orange" />
+
+            <p><a href="~/Account/Signout" style="Color:White"><span>Log Out</span></a></p>
+
+        </div>
+        <div class="col col-lg-6 Appointmentcol">
+          
+            @if (Model.appointment == null)
+            {
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header  "><b>Upcoming Appointment</b></div>
+                    <div class="card-body bg-dark">
+                        <p class="card-title"><span class="fas fa-calendar-check"></span></p>
+                        <p class="card-text">Our record indicate that you don't have any upcomin appointment.<button type="button" class="btn btn-default">Appointment</button></p>
+                    </div>
+                </div>
+            }
+
+            else
+            {
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header  "><b>Upcoming Appointment</b></div>
+                    <div class="card-body bg-dark">
+                        <p class="card-title"><span class="fas fa-calendar-check"></span></p>
+                        <p class="card-text">Your next appointment is on @Convert.ToDateTime(Model.appointment.AppointmentDate.Value.Date).ToShortDateString()<p><button type="button" class="btn btn-default">Appointment</button></p>
+                    </div>
+                </div>
+            }
+
+
+            }
+
+        </div>
+
+
+    </div>
+</div>

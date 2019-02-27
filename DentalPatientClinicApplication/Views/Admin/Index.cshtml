@@ -1,0 +1,323 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+@{
+    ViewBag.Title = "ManageUserRoles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<img src="~/Content/ajax-loader.gif" id="spiner" class="hidden"
+     style="position: fixed; left: 50%; top: 50%; background-color: transparent;  z-index:99999;
+                                      height: 100px; margin-top: -20px;width: 100px; margin-left: -50px;" />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <section class="content">
+                <div class="box">
+                    <div class="box-header" style="background-color: #222d32; color: white;text-align: center">
+                        <h3 class="box-title" align="center">All Users</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="payments" class="table responsive datatable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.user.UserName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.user.Email)
+                                    </th>
+
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.user.PhoneNumber)
+                                    </th>
+
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model.userslist)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UserName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Email)
+                                        </td>
+
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                        </td>
+
+                                        <td>
+                                            <input class="edit btn btn-success btn-sm" btn btn-info btn-sm" type="button" value="Edit" onclick="edit('@item.Id')"
+                                                   data-assigned-id="@item.Id" data-toggle="modal" data-target="#exampleModalLong" />
+                                            <input class="detail btn btn-info btn-sm" type="button" value="Detail" onclick="detail('@item.Id')"
+                                                   data-assigned-id="@item.Id" data-toggle="modal" data-target="#exampleModalLong" />
+                                            @*@Html.ActionLink("Edit", "EditUser", new {id = item.Id}, new {data_modal = ""}) |
+                                                @Html.ActionLink("Details", "Profile", new {id = item.Id}, new {data_modal = ""})*@
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <hr />
+    <div class="row col-sm-12 col-lg-12 col-md-12">
+        <h1 align="center" style="">Role Manager</h1>
+        <br />
+    </div>
+
+    <div class="row col-sm-12 col-lg-12 col-md-12">
+        <div class="col-sm-6 col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="background-color: #222d32">
+                    <h4 align="center">Roles</h4>
+                </div>
+                <div class="panel-body" style="height: 204px; overflow-y: scroll">
+                    @using (Html.BeginForm("Create", "Admin", new { @class = "form-horizontal" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        <div>
+                            Role name: @Html.TextBox("RoleName")
+                            <input type="submit" value="Add Role" class="btn btn-info btn-sm" />
+                        </div>
+                    }
+                    <br />
+                    <table class="table table-striped table-hover col-sm-6 col-lg-6 col-md-6 ">
+                        <tbody id="rolelist"></tbody>
+                        @*@foreach ( role in ViewBag.Roles)
+                        {
+
+                            <tr>
+                                <td class="col-sm-1 col-lg-5 col-md-5">
+                                    <strong>@role.</strong>
+                                </td>
+                                <td class="col-sm-1 col-lg-1 col-md-1">
+                                    <span onclick="return confirm('Are you sure to delete?')"> @Html.ActionLink("Delete", "Delete", new { id = role.id }, new { @class = "btn btn-danger btn-sm" })</span>
+
+                                </td>
+                            </tr>
+                        }*@
+                    </table>
+                </div> <!--End Panel Body-->
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="background-color: #222d32">
+                    <h4 align="center">Remove Role from User</h4>
+                </div>
+                <div class="panel-body" style="height: 204px;">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+
+                        <p>User Name:@Html.DropDownList("UserID", null, "---Select---", htmlAttributes: new { @id = "useridforremove", @class = "form-control" })</p>
+                        <p>Role Name:<select id="id" class="form-control"></select></p>
+                        <p><input type="button" id="deletebtn" value="Delete this user from Role" class=" btn btn-danger" /></p>
+
+                    }
+                </div> <!-- End Panel Body-->
+            </div> <!-- End Panel -->
+        </div> <!--End First Column-->
+
+        <div class="col-sm-6 col-lg-6 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="background-color: #222d32">
+                    <h4 align="center">Add a Role to a User</h4>
+                </div>
+                <div class="panel-body" style="height: 204px">
+                    @using (Html.BeginForm("RoleAddToUser", "Admin", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true)
+                        <p>User Name:<span>@Html.DropDownList("UserID", null, htmlAttributes: new { @id = "userid", @class = "form-control" })</span></p>
+                        <p>Role Name:@Html.DropDownList("RoleID", null, htmlAttributes: new { @id = "roleid", @class = "form-control" })</p>
+                        <p><input type="button" id="btn1" value="Save" class=" btn btn-info" /></p>
+
+                    }
+                </div> <!-- End Panel Body-->
+            </div> <!-- End Panel -->
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="background-color: #222d32">
+                    <h4 align="center">List Roles for a User</h4>
+                </div>
+                <div class="panel-body" style="height: 204px;">
+                    @using (Html.BeginForm("GetRoles", "Admin"))
+                    {
+                        @Html.AntiForgeryToken()
+                        <p>
+                            User Name:@Html.DropDownList("UserID", null, htmlAttributes: new { @class = "form-control" })
+                            <input type="button" id="GetRoles" value="Get Roles for this User" class=" btn btn-info" />
+                        </p>
+                    }
+                    <div id="roles"></div>
+                </div> <!-- End Panel Body-->
+            </div> <!-- End Panel -->
+
+
+
+        </div> <!--End Second Column-->
+
+    </div> <!--Overall Page Wrapper-->
+
+
+</div>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #222d32;color: white">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 align="center">Inventory Details</h3>
+            </div>
+            <div class="modal-body">
+                <div id="partial"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+
+        $("#btn1").click(function() {
+            $.ajax({
+                url: '@Url.Action("RoleAddToUser", "Admin")',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    Name: $("#roleid").val(),
+                    Id: $("#userid").val()
+                }),
+                dataType: 'json',
+                success: function(message) {
+                    alert("Role Has been assinged");
+                },
+                error: function(request, error) {
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        });
+
+        $("#GetRoles").click(function() {
+
+            $.ajax({
+                url: '@Url.Action("GetRoles", "Admin")',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    Id: $("#UserID").val()
+                }),
+                dataType: 'json',
+                success: function(res) {
+                    if (res.length != 0) {
+                        var ul = $("<ol />");
+                        for (var i = 0; i < res.length; i++)
+                            ul.append("<li>" + res[i] + "</li>");
+                        $("#roles").html(ul);
+                    } else {
+                        alert("no role assinged");
+                    }
+
+                },
+
+                error: function(request, error) {
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        });
+        $("#useridforremove").change(function() {
+
+            $.ajax({
+                url: '@Url.Action("GetRoles", "Admin")',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    Id: $("#UserID").val()
+                }),
+                dataType: 'json',
+                success: function(res) {
+                    $("#id").empty();
+                    $.each(res,
+                        function(value, key) {
+                            $("#id").append($("<option></option>")
+                                .attr("value", key).text(key));
+                        });
+
+
+                },
+
+                error: function(request, error) {
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        });
+        $("#deletebtn").click(function() {
+            $.ajax({
+                url: '@Url.Action("DeleteRoleForUser", "Admin")',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                data: JSON.stringify({
+                    Name: $("#id").val(),
+                    Id: $("#useridforremove").val()
+                }),
+                dataType: 'json',
+                success: function(message) {
+                    $.ajax({
+                        url: '@Url.Action("GetRoles", "Admin")',
+                        type: 'POST',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify({
+                            Id: $("#UserID").val()
+                        }),
+                        dataType: 'json',
+                        success: function(res) {
+                            $("#id").empty();
+                            $.each(res,
+                                function(value, key) {
+                                    $("#id").append($("<option></option>")
+                                        .attr("value", key).text(key));
+                                });
+
+
+                        },
+
+                        error: function(request, error) {
+                            alert("Request: " + JSON.stringify(request));
+                        }
+                    });
+                    alert("Role Has been Removed");
+                },
+                error: function(request, error) {
+                    alert("Request: " + JSON.stringify(request));
+                }
+            });
+        });
+        $(document).ajaxStart(function() {
+            $("#spiner").removeClass('hidden');
+        });
+        $(document).ajaxComplete(function() {
+            $("#spiner").addClass('hidden');
+        });
+
+    </script>
+
+}

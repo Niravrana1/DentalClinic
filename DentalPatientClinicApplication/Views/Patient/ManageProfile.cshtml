@@ -1,0 +1,98 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+@{
+    ViewBag.Title = "ManageProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageProfile</h2>
+<hr />
+
+@using (Html.BeginForm("ManageProfile", "Patient", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal col-md-5">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.FirstName)
+
+            @Html.TextBoxFor(m => m.patient.FirstName, new { @class = "form-control", placeholder = "First Name" })
+            @Html.ValidationMessageFor(m => m.patient.FirstName)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.LastName)
+
+            @Html.TextBoxFor(m => m.patient.LastName, new { @class = "form-control", placeholder = "Last Name" })
+            @Html.ValidationMessageFor(m => m.patient.LastName)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.DateOfBirth)
+
+            @Html.TextBoxFor(m => m.patient.DateOfBirth, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.patient.DateOfBirth)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.Email)
+
+            @Html.TextBoxFor(m => m.patient.Email, new { @class = "form-control", placeholder = "Email" })
+            @Html.ValidationMessageFor(m => m.patient.Email)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.PhoneNumber)
+
+            @Html.TextBoxFor(m => m.patient.PhoneNumber, new { @class = "form-control", placeholder = "Phone Number" })
+            @Html.ValidationMessageFor(m => m.patient.PhoneNumber)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.StreetAddress)
+
+            @Html.TextBoxFor(m => m.patient.StreetAddress, new { @class = "form-control", placeholder = "Street Address" })
+            @Html.ValidationMessageFor(m => m.patient.StreetAddress)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.City)
+
+            @Html.TextBoxFor(m => m.patient.City, new { @class = "form-control", placeholder = "City" })
+            @Html.ValidationMessageFor(m => m.patient.City)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.State)
+
+            @Html.TextBoxFor(m => m.patient.State, new { @class = "form-control", placeholder = "State" })
+            @Html.ValidationMessageFor(m => m.patient.State)
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.patient.ZipCode)
+            @Html.TextBoxFor(m => m.patient.ZipCode, new { @class = "form-control", placeholder = "Zip Code" })
+            @Html.ValidationMessageFor(m => m.patient.ZipCode)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.user.UserName)
+            @Html.TextBoxFor(m => m.user.UserName, new { @class = "form-control", placeholder = "Username" })
+            @Html.ValidationMessageFor(m => m.user.UserName)
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Save</button>
+
+        <a href="~/Manage/ChangePassword"><span style="color:blue">Change Password</span></a>
+    </div>
+
+}
+

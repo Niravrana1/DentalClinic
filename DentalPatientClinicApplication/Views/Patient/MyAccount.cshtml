@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Account Information</h2>
+<hr />
+<div class="container-fluid col-lg-6">
+    <b>Primary Account Holder</b>
+    <h5>
+       @ViewBag.Name
+    </h5><hr />
+        <b>Account Number</b>
+        <h5>@ViewBag.Id</h5><hr />
+
+    <b>Account Information</b>
+    <h5>
+        @ViewBag.Number
+    </h5> 
+    <h5>
+        @ViewBag.Email
+    </h5>
+</div>
+

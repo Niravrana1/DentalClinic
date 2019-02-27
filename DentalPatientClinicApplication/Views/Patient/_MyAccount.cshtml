@@ -1,0 +1,39 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+@{
+    ViewBag.Title = "_MyAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Html.Partial("_Home",Model)
+<div class="container-fluid">
+
+    <ul class="nav nav-tabs ">
+        <li class="nav-item"><a class="nav-link active" href="~/patient/_Account">Account Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="~/patient/_ManageProfile">Manage Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="~/patient/_Appointments">Manage Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="~/patient/">Make Payment</a></li>
+    </ul>
+
+</div>
+
+<hr />
+<h2>My Account</h2>
+
+<div class="container-fluid col-lg-6">
+    <b>Primary Account Holder</b>
+    <h5>
+        @ViewBag.Name
+    </h5><hr />
+    <b>Account Number</b>
+    <h5>@ViewBag.Id</h5><hr />
+
+    <b>Account Information</b>
+    <h5>
+        @ViewBag.Number
+    </h5>
+    <h5>
+        @ViewBag.Email
+    </h5>
+</div>
+

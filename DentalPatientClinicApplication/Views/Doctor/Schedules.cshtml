@@ -1,0 +1,109 @@
+﻿@model IEnumerable<DentalPatientClinicApplication.Models.DoctorSchedule>
+@{
+    ViewBag.Title = "Schedules";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Schedules</h2>
+
+<table class="table" id="tblschedule">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DoctorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableTime)
+            </td>
+            <td>
+                @if (User.IsInRole("ReceptionistRole"))
+                {
+
+                }
+                else
+                {
+                    @Html.ActionLink("Edit Schedule","EditSchedule", "Doctor", new { id = item.DSid },null)
+                    @*@Html.ActionLink(" DeleteService", "Doctor", new { id = item.DSid, Id = "deletebtn" })*@
+                    <button class="btn btn-link" id="deletebtn" data-recid="@item.DSid">Delete</button>
+                }
+            </td>
+        </tr>
+    }
+    </table>
+
+@section scripts{
+        <script>
+            @*$("#deletebtn").on("click", "#deletebtn", function () {
+                 var button = $(this);
+            bootbox.confirm("Are you sure you want to delete this service?", function (result) {
+                $.ajax({
+                    url:@Html.Action("deleteschedule", "Doctor"),
+                    data: JSON.stringify({
+                        id = button.attr(id)
+                    }),
+                    method: "DELETE",
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    success: function (message) {
+                        bootbox.alert(message);
+                    },
+                    error: function () {
+                        bootbox.alert("Cannot delete this service");
+                    }
+
+                });
+            });
+            });*@
+
+            /* $("#deletebtn").click(function ()*/
+            $("#tblschedule").on("click","#deletebtn",function (){
+                alert("button clicked");
+                var button = $(this).data('recid');
+                bootbox.confirm("Are you sure you want to delete this receptionist?", function (result) {
+                    if (result == true) {
+                        $.ajax({
+                            url: '@Url.Action("deleteschedule", "Doctor")',
+                            type: 'POST',
+                            contentType: 'application/json; charset=utf-8',
+                            data: JSON.stringify({
+
+                                Id: button
+                            }),
+                            dataType: 'json',
+                            success: function (message) {
+                                bootbox.alert(message);
+                                
+                            },
+                            error: function () {
+                                alert(button);
+                                bootbox.alert("Cannot delete this service");
+                            }
+                        });
+                    }
+                    else {
+
+                    }
+                    
+                });
+            });
+        </script>
+    }

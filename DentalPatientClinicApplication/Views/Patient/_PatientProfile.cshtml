@@ -1,0 +1,17 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+
+
+<h2>Profile</h2>
+<hr />
+
+@using (Html.BeginForm("EditProfile", "Patient", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.patient.FirstName);
+    @Html.TextBoxFor(m => m.user.UserName);
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+
+
+
+

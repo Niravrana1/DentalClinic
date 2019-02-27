@@ -1,0 +1,103 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.Recapp
+@{
+    ViewBag.Title = "Appointments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Appointments</h2>
+
+<div class="container-fluid">
+
+    <ul class="nav nav-tabs ">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Upcoming">Upcoming Appointments</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Today">Today Appointments</a></li>
+        
+    </ul>
+
+</div>
+
+<div class="container-fluid tab-content">
+    <div id="Upcoming" class="tab-pane fade in active">
+        <table class="table table-striped table-hover" id="appointmenttbl">
+
+
+            @if (Model.appointments.Count() == 0)
+            {
+
+                <p>There is no appointment</p>
+            }
+            else
+            {
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Doctor Name</th>
+                    <th>Reason for appointment</th>
+                    <th>Appointment Status</th>
+                    <th>Action</th>
+                </tr>
+                foreach (var a in Model.appointments)
+                {
+                    <tr class="info">
+                        <td>@a.PatientName</td>
+                        <td>@Convert.ToDateTime(a.AppointmentDate.Value.Date).ToShortDateString()</td>
+                        <td>@a.AppointmentTime</td>
+                        <td>@a.DoctorName</td>
+                        <td>@a.Reason</td>
+                        <td>@a.AppointmentStatus</td>
+                        <td>@Html.ActionLink("Edit", "Editappointment", "Patient", new { id = a.AppointmentId }, null)</td>
+                        @*<td>@Html.ActionLink("Delete", "Deleteappointment", "Patient", new { id = a.AppointmentId }, null)</td>*@
+                        <td><button type="button" class="btn btn-link" id="deletebtn" data-recid="@a.AppointmentId">Delete</button></td>
+                    </tr>
+
+                }
+
+            }
+        </table>
+
+
+
+    </div>
+
+
+    <div id="Today" class="tab-pane fade in">
+        <table class="class=" table table-striped table-hover" id="appointmenttbl" " id="appointmenttbl">
+
+
+            @if (Model.apps.Count() == 0)
+            {
+                <p>There is no appointment for today</p>
+            }
+            else
+            {
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Doctor Name</th>
+                    <th>Reason for appointment</th>
+                    <th>Appointment Status</th>
+                    <th>Action</th>
+                </tr>
+                foreach (var a in Model.apps)
+                {
+                    <tr class="info">
+                        <td>@a.PatientName</td>
+                        <td>@Convert.ToDateTime(a.AppointmentDate.Value.Date).ToShortDateString()</td>
+                        <td>@a.AppointmentTime</td>
+                        <td>@a.DoctorName</td>
+                        <td>@a.Reason</td>
+                        <td>@a.AppointmentStatus</td>
+                        <td>@Html.ActionLink("Edit", "Editappointment", "Patient", new { id = a.AppointmentId }, null)</td>
+                        @*<td>@Html.ActionLink("Delete", "Deleteappointment", "Patient", new { id = a.AppointmentId }, null)</td>*@
+                        <td><button type="button" class="btn btn-link" id="deletebtn" data-recid="@a.AppointmentId">Delete</button></td>
+                    </tr>
+
+                }
+
+            }
+        </table>
+
+</div>
+</div>

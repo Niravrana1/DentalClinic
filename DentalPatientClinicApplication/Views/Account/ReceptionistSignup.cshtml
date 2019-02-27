@@ -1,0 +1,76 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ReceptionistSignupview
+@{
+    ViewBag.Title = "ReceptionistSignup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ReceptionistSignup</h2>
+
+
+@using (Html.BeginForm("ReceptionistSignup", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-horizontal col-md-5">
+        <h4>Doctor</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name)
+
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name" })
+            @Html.ValidationMessageFor(m => m.Name)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfBirth)
+            @Html.TextBoxFor(m => m.DateOfBirth, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+            @*@Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control", placeholder = "Date Of Birth" })*@
+            @Html.ValidationMessageFor(m => m.DateOfBirth)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+            @Html.ValidationMessageFor(m => m.Email)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber)
+
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", placeholder = "Phone number" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+
+            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "User name" })
+            @Html.ValidationMessageFor(m => m.Username)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Password" } })
+            @Html.ValidationMessageFor(m => m.Password)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword)
+            @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", placeholder = "Confirm password" } })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+
+        </div>
+        <button type="submit" value="=Receptionistsignup" class="btn-primary">Submit</button>
+    </div>
+
+}
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+}

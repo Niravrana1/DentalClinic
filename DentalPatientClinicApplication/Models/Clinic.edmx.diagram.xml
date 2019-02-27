@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f3dc51714c1494e9f75fceee572e902" Name="Diagram1">
+        <EntityTypeShape EntityType="ClinicModel.Appointment" Width="1.5" PointX="9" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.AspNetRole" Width="1.5" PointX="1.125" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.AspNetUserClaim" Width="1.5" PointX="7.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.AspNetUserLogin" Width="1.5" PointX="10.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.AspNetUser" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Doctor" Width="1.5" PointX="4.125" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Patient" Width="1.5" PointX="6.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Receptionist" Width="1.5" PointX="2.375" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="ClinicModel.FK__Appointme__Patie__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK__Appointment__Did__6B24EA82" ManuallyRouted="true" >
+          <ConnectorPoint PointX="5.625" PointY="7.5814518229166659" />
+          <ConnectorPoint PointX="9.75" PointY="7.5814518229166659" />
+          <ConnectorPoint PointX="9.75" PointY="6.7109993489583326" />
+        </AssociationConnector>
+        <AssociationConnector Association="ClinicModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK__Doctor__UserId__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK__Patient__UserId__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK__Reception__UserI__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ClinicModel.DoctorSchedule" Width="1.5" PointX="6.625" PointY="8" />
+        <AssociationConnector Association="ClinicModel.FK__DoctorSch__Docto__06CD04F7" />
+        <EntityTypeShape EntityType="ClinicModel.DoctorService" Width="1.5" PointX="11" PointY="3.875" />
+        <AssociationConnector Association="ClinicModel.FK__Appointme__Servi__09A971A2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

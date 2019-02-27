@@ -1,0 +1,80 @@
+﻿@model IEnumerable<DentalPatientClinicApplication.Models.Appointment>
+@{
+    ViewBag.Title = "Appointments";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <h4>Patient Appointments</h4>
+    <table class="table table-striped table-hover" id="appointmenttbl">
+
+
+
+        <tr>
+            <th>Name</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th>Doctor Name</th>
+            <th>Reason for appointment</th>
+            <th>Appointment Status</th>
+            <th>Action</th>
+        </tr>
+
+
+
+        @foreach (var a in Model)
+        {
+            <tr class="info">
+                <td>@a.PatientName</td>
+                <td>@Convert.ToDateTime(a.AppointmentDate.Value.Date).ToShortDateString()</td>
+                <td>@a.AppointmentTime</td>
+                <td>@a.DoctorName</td>
+                <td>@a.Reason</td>
+                <td>@a.AppointmentStatus</td>
+                @*<td>@Html.ActionLink("Edit", "Editappointment", "Doctor", new { id = a.AppointmentId }, null)</td>*@
+                @*<td>@Html.ActionLink("Delete", "Deleteappointment", "Patient", new { id = a.AppointmentId }, null)</td>*@
+                <td><button type="button" class="btn btn-link" id="deletebtn" data-recid="@a.AppointmentId">Delete</button></td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+@section scripts{
+    <script>
+
+
+        $("#appointmenttbl").on("click", "#deletebtn", function () {
+            console.log("delete button clicked");
+                alert("button clicked");
+                var button = $(this).data('recid');
+                bootbox.confirm("Are you sure you want to delete this receptionist?", function (result) {
+                    if (result == true) {
+                        $.ajax({
+                            url: '@Url.Action("deleteappointment", "patient")',
+                            type: 'POST',
+                            contentType: 'application/json; charset=utf-8',
+                            data: JSON.stringify({
+
+                                Id: button
+                            }),
+                            dataType: 'json',
+                            success: function (message) {
+                                bootbox.alert(message);
+
+                            },
+                            error: function () {
+                                alert(button);
+                                bootbox.alert("Cannot delete this service");
+                            }
+                        });
+                    }
+                    else {
+
+                    }
+
+                });
+            });
+    </script>
+}

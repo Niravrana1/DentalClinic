@@ -1,0 +1,286 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.Appointmentview
+@{
+    ViewBag.Title = "Makeappointment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<hr />
+<div class="col-4">
+    <h3>Make Appointment</h3>
+    <hr />
+</div>
+
+@using (Html.BeginForm("Makeappointment", "Receptionist"))
+{
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="container-fluid">
+    @Html.DropDownList("typeofpatient", new List<SelectListItem>
+    {
+    new SelectListItem{Text="New" , Value="New"},
+    new SelectListItem{Text="Existing",Value="Existing"}
+    }, "--Select Patient type--", new { @class = "form-control" , Id = "type"})
+
+
+
+    <div id="firstdiv">
+
+
+        @*<div class="form-group">
+            @Html.LabelFor(m => m.PatientId)
+            @Html.TextBoxFor(m => m.PatientId, new { @class = "form-control", Id = "Pid" })
+            @Html.ValidationMessageFor(m => m.PatientId)
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PatientName)
+
+            @Html.TextBoxFor(m => m.PatientName, new { @class = "form-control", placeholder = "Name", Id = "Pname" })
+            @Html.ValidationMessageFor(m => m.PatientName)
+
+        </div>
+
+        <div class="form-group">
+
+            @*@Html.DropDownListFor(m => m.Did, new List<SelectListItem>{
+                 new SelectListItem{ Text="Alex Moran" , Value="1"},
+                 new SelectListItem{ Text="Luis J" , Value="2"},
+                 new SelectListItem{ Text="Nirav R" , Value="3"}
+        },"--Select Doctor--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Did)*@
+
+            @*@Html.DropDownListFor(m => m.Did, new SelectList(ViewBag.doctorlist, "DoctorId", "DoctorName"), "--Select Doctor--", htmlAttributes: new { @class = "form-control", Id = "SelectDoctor" })*@
+            @Html.DropDownListFor(m => m.doc.DId, new SelectList(Model.doc, "DoctorId", "DoctorName"), "--Select Doctor--", htmlAttributes: new { @class = "form-control", Id = "SelectDoctor" })
+
+
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AppointmentDate)
+
+            @Html.TextBoxFor(m => m.AppointmentDate, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+            @Html.ValidationMessageFor(m => m.AppointmentDate)
+
+        </div>
+        @*<div class="form-group">
+            <div class="col-md-2">
+                <label class="control-label">Appointment Date</label>
+            </div>
+
+            <div >
+                <div class='input-group date' id="enable-date">
+                    <input id="txtDate" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" type='date' data-input />
+                </div>
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AppointmentTime)
+
+            @*@Html.DropDownListFor(m => m.AppointmentTime, new SelectList(ViewBag.Timelist, "AvailableTime", "AvailableTime"), "--Select Time--", new { @class = "form-control", Id = "Selecttime" })*@
+
+            @*@Html.DropDownListFor(m => m.AppointmentTime, new List<SelectListItem>{
+             new SelectListItem{ Text="12:00" , Value="12:00"},
+             new SelectListItem{ Text="02:00" , Value="02:00"},
+             new SelectListItem{ Text="04:00" , Value="04:00"},
+            },"--Select Time--",new {@class="form-control" , Id = "txttime" })*@
+            <div>
+                @Html.DropDownList("txtTime", null, "Select Time", new { @class = "form-control", id = "txttime" })
+
+            </div>
+
+            @Html.ValidationMessageFor(m => m.AppointmentTime)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Reason)
+
+            @Html.TextAreaFor(m => m.Reason, new { @class = "form-control", placeholder = "Reason..", id = "Reason" })
+            @Html.ValidationMessageFor(m => m.Reason)
+
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn1">Submit</button>
+    </div>
+    <div id="middiv">
+        @Html.TextBox("PatientId", null, new { @class = "form-control", placeholder = "Patient Id", id = "pid" })
+        <button id="search" class="btn btn-primary">Search</button>
+    </div>
+
+    <div id="seconddiv">
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(m => m.PatientName)
+
+            @Html.TextBoxFor(m => m.PatientName, new { @class = "form-control", placeholder = "Name", Id = "Pname" })
+            @Html.ValidationMessageFor(m => m.PatientName)
+
+        </div>
+
+        <div class="form-group">
+
+            @*@Html.DropDownListFor(m => m.Did, new List<SelectListItem>{
+                     new SelectListItem{ Text="Alex Moran" , Value="1"},
+                     new SelectListItem{ Text="Luis J" , Value="2"},
+                     new SelectListItem{ Text="Nirav R" , Value="3"}
+            },"--Select Doctor--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Did)*@
+
+            @Html.DropDownListFor(m => m.Did, new SelectList(ViewBag.doctorlist, "DoctorId", "DoctorName"), "--Select Doctor--", htmlAttributes: new { @class = "form-control", Id = "SelectDoctor" })
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AppointmentDate)
+
+            @Html.TextBoxFor(m => m.AppointmentDate, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+            @Html.ValidationMessageFor(m => m.AppointmentDate)
+
+        </div>
+        @*<div class="form-group">
+            <div class="col-md-2">
+                <label class="control-label">Appointment Date</label>
+            </div>
+
+            <div >
+                <div class='input-group date' id="enable-date">
+                    <input id="txtDate" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" type='date' data-input />
+                </div>
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AppointmentTime)
+
+            @*@Html.DropDownListFor(m => m.AppointmentTime, new SelectList(ViewBag.Timelist, "AvailableTime", "AvailableTime"), "--Select Time--", new { @class = "form-control", Id = "Selecttime" })*@
+
+            @*@Html.DropDownListFor(m => m.AppointmentTime, new List<SelectListItem>{
+             new SelectListItem{ Text="12:00" , Value="12:00"},
+             new SelectListItem{ Text="02:00" , Value="02:00"},
+             new SelectListItem{ Text="04:00" , Value="04:00"},
+            },"--Select Time--",new {@class="form-control" , Id = "txttime" })*@
+            <div>
+                @Html.DropDownList("txtTime", null, "Select Time", new { @class = "form-control", id = "txttime" })
+
+            </div>
+
+            @Html.ValidationMessageFor(m => m.AppointmentTime)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Reason)
+
+            @Html.TextAreaFor(m => m.Reason, new { @class = "form-control", placeholder = "Reason..", id = "Reason" })
+            @Html.ValidationMessageFor(m => m.Reason)
+
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn2">Submit</button>
+    </div>
+
+
+
+   
+</div>
+
+
+}
+
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+           
+            $("#firstdiv").hide();
+            $("#seconddiv").hide();
+            $("#middiv").hide();
+
+        });
+        $("#type").change(function () {
+            //alert("changed");
+            if ($("#type").val() == "New") {
+                $("#firstdiv").hide();
+                $("#seconddiv").hide();
+                $("#middiv").show();
+            }
+            if ($("#type").val() == "Existing") {
+                $("#firstdiv").hide();
+                $("#seconddiv").show();
+                $("#middiv").hide();
+            }
+
+        });
+
+        $("#search").click(function () {
+            var validation;
+            validation = $("#pid").val() != null && $("#pid").val() != "";
+            if (validation) {
+                var value = $("#pid").val();
+                $.ajax({
+                    url: '@Url.Action("checkpatient", "Receptionist")',
+                    data: JSON.stringify({
+                        PId : $("#pid").val()
+                    }),
+                    method: "POST",
+                    datatype: 'application/json',
+                    contentType: 'application/json',
+                    success: function (pateint) {
+                        console.log(pateint);
+                       
+                    },
+                    error: function () {
+
+                    }
+
+                });
+            }
+            else {
+                alert("Please fill all fields");
+            }
+           
+        });
+
+        $("#btn").click(function () {
+            var validation;
+
+            if (("#type").val() == "Existing") {
+                validation = $("#Pid").val() != "" && $("#Pname").val() != "" && $("#SelectDoctor").val() != null && $("#txtdate").val() != null && $("#txttime").val() != null && $("#reason").val() != null
+                if (validation) {
+                    var pid, pname, doc, adate, atime, reason;
+                    pid = $("#Pid").val();
+                    pname = $("#Pname").val();
+                    doc = $("#SelectDoctor").val();
+                    adate = $("#txtdate").val();
+                    atime = $("#txttime").val();
+                    reason = $("#reason").val();
+
+                    $.ajax({
+                        url: '@Url.Action("Makeappointment", "Receptionist")',
+                        data: { PId: pid, PName: pname, Doc: doc, AppointmentDate: adate.toString("yyyy-MM-dd"), AppointmentTime: timeConvertto24Format(atime), Reason: reason },
+                        error: function () {
+                            alert('Error Occured! Try Again');
+                        },
+                        // dataType: 'jsonp',
+                        success: function (data) {
+                            alert(data.message);
+                            if (data.message == 'Appointment Booked Successfully') {
+                                window.location.reload();
+                            }
+                        },
+                        type: 'POST'
+                    });
+                }
+                else {
+
+                    alert('Please Fill All Fields');
+                }
+
+            }
+            if("# b") {
+
+            }
+           
+
+        });
+    </script>
+}
+

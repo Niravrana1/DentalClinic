@@ -1,0 +1,98 @@
+﻿@model Tuple<DentalPatientClinicApplication.Models.Viewmodel.ForAdmin, IEnumerable<DentalPatientClinicApplication.Models.Appointment>> 
+        @*I used tuple to use regular model and Ienumerable model in single view*@
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .White {
+        color: white;
+    }
+
+    .NW {
+        width: 97%;
+    }
+
+    /*.card-header{
+        border-bottom:2px solid orange;
+    }*/
+
+    .card {
+        border-radius: 50px;
+    }
+
+    .card-body {
+        border-radius: 50px;
+    }
+
+    .fa-calendar-check {
+        font-size: 35px;
+    }
+</style>
+
+@*@Html.Partial("_Home",Model.appointment)*@
+<div class="container-fluid">
+    <img class="img-fluid" src="~/Image/background-1.png" />
+    <div class="carousel-caption row p">
+        <div class="col col-lg-3 Usercol ">
+            <h4 class="White">
+                Nirav Rana
+            </h4>
+            <p><b>Primary User</b></p>
+            <hr style="border:2px solid orange" />
+
+            <p><a href="~/Account/Signout" style="Color:White"><span>Log Out</span></a></p>
+
+        </div>
+        <div class="col col-lg-6 Appointmentcol">
+            
+            @if (Model.Item1.appointment == null)
+            {
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header  "><b>Upcoming Appointment</b></div>
+                    <div class="card-body bg-dark">
+                        <p class="card-title"><span class="fas fa-calendar-check"></span></p>
+                        <p class="card-text">Our record indicate that you don't have any upcomin appointment.<button type="button" class="btn btn-default">Appointment</button></p>
+                    </div>
+                </div>
+            }
+
+            else
+            {
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header  "><b>Upcoming Appointment</b></div>
+                    <div class="card-body bg-dark">
+                        <p class="card-title"><span class="fas fa-calendar-check"></span></p>
+                        <p class="card-text">Your next appointment is on @Convert.ToDateTime(Model.Item1.appointment.AppointmentDate.Value.Date).ToShortDateString()<p><button type="button" class="btn btn-default">Appointment</button></p>
+                    </div>
+                </div>
+            }
+
+
+            }
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <ul class="nav nav-tabs ">
+        <li class="nav-item"><a class="nav-link" href="~/patient/_MyAccount">Account Information</a></li>
+        <li class="nav-item"><a class="nav-link" href="~/patient/_ManageProfile">Manage Profile</a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#_Appointment">Manage Appointment</a></li>
+        <li class="nav-item"><a class="nav-link" href="~/patient/">Make Payment</a></li>
+    </ul>
+    <div class="container-fluid tab-content">
+        <div id="_Appointment" class="tab-pane fade in active">
+
+            @Html.Partial("_Appointment",Model.Item2)
+        </div>
+
+
+    </div>
+    </div>
+

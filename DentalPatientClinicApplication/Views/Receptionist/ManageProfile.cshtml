@@ -1,0 +1,59 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+@{
+    ViewBag.Title = "ManageProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageProfile</h2>
+
+@using (Html.BeginForm("ReceptionistSignup", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-horizontal col-md-5">
+        <h4>Doctor</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.receptionist.ReceptionistName)
+
+            @Html.TextBoxFor(m => m.receptionist.ReceptionistName, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.receptionist.ReceptionistName)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.receptionist.DateOfBirth)
+
+            @Html.TextBoxFor(m => m.receptionist.DateOfBirth, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.receptionist.DateOfBirth)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.receptionist.Email)
+
+            @Html.TextBoxFor(m => m.receptionist.Email, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.receptionist.Email)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.receptionist.PhoneNumber)
+
+            @Html.TextBoxFor(m => m.receptionist.PhoneNumber, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.receptionist.PhoneNumber)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.user.UserName)
+
+            @Html.TextBoxFor(m => m.user.UserName, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.user.UserName)
+
+        </div>
+        
+        <button type="submit" value="=Receptionistsignup" class="btn-primary">Submit</button>
+    </div>
+
+}

@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/Image/bg.jpg" alt="Clinic1" width="1100" height="500" />
+            <div class="carousel-caption ">
+                <h3>Clinic 1</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/Image/bg.jpg" alt="Clinic1" width="1100" height="500" />
+            <div class="carousel-caption">
+                <h3>Clinic 2</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/Image/bg.jpg" alt="Clinic1" width="1100" height="500" />
+            <div class="carousel-caption container-fluid">
+                <h3>Clinic 3</h3>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+@*Jumbostone*@
+<div class="jumbotron container-fluid p-5">
+
+</div>
+
+@* Columns *@
+<div class="container-fluid">
+    <div class="container-fluid text-center w-50">
+        <h2>Services</h2>
+        <p class="fas fa-dna"></p>
+        <p class="lead">
+            Visit your dentist at least once every six months. To maintain healthy teeth and gums, it's important to have regular check-ups
+        </p>
+    </div>
+    <div class="row ">
+        <div class="col-sm-4 text-center">
+
+
+            <h4>Root canel</h4>
+            <i class="flaticon-dental-care " style="width:50px"></i>
+            <p class="lead">
+                A root canal is a treatment used to repair and save a tooth that is badly decayed or becomes infected. 
+            </p>
+
+        </div>
+        <div class="col-sm-4 text-center">
+            <h4>Teeth Whitening</h4>
+            <i class="flaticon-tooth-2" style="width:50px"></i>
+            <p class="lead">
+                Tooth whitening, is either the restoration of a natural tooth shade or whitening beyond the natural shade.
+            </p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <h4>Teeth Bridge</h4>
+            <i class="flaticon-implants" style="width:50px"></i>
+            <p class="lead">
+                A dental bridge is a dental apparatus that uses a series of beautifully crafted porcelain crowns to fill in a space left by a missing tooth.
+            </p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <h4>Oral Examinations</h4>
+            <i class="flaticon-implants" style="width:50px"></i>
+            <p class="lead">
+                During an oral dental exam, the dentist or hygienist will clean your teeth and check for cavities and gum disease
+            </p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <h4>Extractions</h4>
+            <i class="flaticon-implants" style="width:50px"></i>
+            <p class="lead">
+                A dental extraction is the removal of teeth from the dental alveolus in the alveolar bone.
+            </p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+            <h4>Fillings</h4>
+            <i class="flaticon-implants" style="width:50px"></i>
+            <p class="lead">
+                A filling is a way to restore a tooth damaged by decay back to its normal function and shape
+            </p>
+        </div>
+    </div>
+</div>

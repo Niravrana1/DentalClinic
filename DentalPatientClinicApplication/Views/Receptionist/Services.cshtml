@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DentalPatientClinicApplication.Models.DoctorService>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Services</h2>
+
+<h2>Services</h2>
+
+<table class="table" id="tblservice">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServiceDetails)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceDetails)
+            </td>
+        </tr>
+    }
+
+    </table>

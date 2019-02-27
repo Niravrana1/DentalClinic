@@ -1,0 +1,71 @@
+﻿@model DentalPatientClinicApplication.Models.Viewmodel.ForAdmin
+@{
+    ViewBag.Title = "ManageProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageProfile</h2>
+
+@using (Html.BeginForm("DoctorSignup", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-horizontal col-md-5">
+        <h4>Doctor</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.doctor.DoctorName)
+
+            @Html.TextBoxFor(m => m.doctor.DoctorName, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.doctor.DoctorName)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.doctor.DateOfBirth)
+            @Html.TextBoxFor(m => m.doctor.DateOfBirth, "{0:dd mm yyyy}", new { @class = "form-control", placeholder = "MM/DD/YYYY", value = @DateTime.Now.ToString("yyyy - MM - dd"), type = "date", Id = "txtDate" })
+            @*@Html.TextBoxFor(m => m.doctor.DateOfBirth, new { @class = "form-control", placeholder = "MM/DD/YYYY" })*@
+            @Html.ValidationMessageFor(m => m.doctor.DateOfBirth)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.doctor.Email)
+
+            @Html.TextBoxFor(m => m.doctor.Email, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.doctor.Email)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.doctor.PhoneNumber)
+
+            @Html.TextBoxFor(m => m.doctor.PhoneNumber, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.doctor.PhoneNumber)
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.doctor.Speciality)
+            @Html.DropDownListFor(m => m.doctor.Speciality, new List<SelectListItem> {
+            new SelectListItem {Text="Dental Public Health", Value="Dental Public Health" },
+            new SelectListItem{Text="Oral and Maxillofacial Radiology.",Value="Oral and Maxillofacial Radiology."},
+            new SelectListItem{Text="Oral and Maxillofacial Surgery",Value="Oral and Maxillofacial Surgery"}
+
+    }, "--Choose Speciality--", new { @class = "form-control" })
+
+            @Html.ValidationMessageFor(m => m.doctor.Speciality)
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.user.UserName)
+
+            @Html.TextBoxFor(m => m.user.UserName, new { @class = "form-control", placeholder = "MM/DD/YYYY" })
+            @Html.ValidationMessageFor(m => m.user.UserName)
+
+        </div>
+        
+        <button type="submit" value="=Doctorsignup" class="btn-primary">Submit</button>
+        @Html.ActionLink("Change Password", "ChangePassword","Manage")
+    </div>
+}
